@@ -119,6 +119,6 @@ func main() {
 	fmt.Println("\t\t==========Assignment - 1==========")
 	getPresensi := os.Args[1]
 	idPresensi, _ := strconv.ParseInt(getPresensi, 10, 64)
-	printBiodata(listBiodata[idPresensi])
+	printBiodata(listBiodata[idPresensi-1])
 	fmt.Println("\t\tThank You:)")
 }
