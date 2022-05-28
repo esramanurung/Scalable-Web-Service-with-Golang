@@ -30,4 +30,7 @@ func (u *User) Print() {
 	for _, product := range u.Products {
 		fmt.Println("\tProduct :", product.Name)
 	}
+	
+
 }
+

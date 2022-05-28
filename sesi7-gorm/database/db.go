@@ -9,11 +9,18 @@ import (
 	"gorm.io/gorm"
 )
 
+// const (
+// 	host     = "localhost"
+// 	port     = "5432"
+// 	user     = "esra"
+// 	password = "koinworks"
+// 	db_name  = "hacktiv_sesi7"
+// )
 const (
 	host     = "localhost"
 	port     = "5432"
-	user     = "esra"
-	password = "koinworks"
+	user     = "esra12"
+	password = "koinworks12"
 	db_name  = "hacktiv_sesi7"
 )
 

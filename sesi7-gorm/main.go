@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sesi7-gorm/database"
 
-	// "sesi7-gorm/models"
+	"sesi7-gorm/models"
 	"sesi7-gorm/repository"
 	"strings"
 
@@ -22,7 +22,7 @@ func user(db *gorm.DB) {
 	userRepo := repository.NewUserRepo(db)
 
 	// user := models.User{
-	// 	Email: "test@gmail.com",
+	// 	Email: "esra@gmail.com",
 	// }
 
 	// err := userRepo.CreateUser(&user)
@@ -33,23 +33,23 @@ func user(db *gorm.DB) {
 
 	// fmt.Println("Created success")
 
-	// user := models.User{
-	// 	ID:    1,
-	// 	Email: "nani@gmail.com",
-	// }
+	user := models.User{
+		ID:    2,
+		Email: "lala@gmail.com",
+	}
 
-	// err := userRepo.UpdateUser(&user)
-	// if err != nil {
-	// 	fmt.Println("errorupdate : ", err.Error())
-	// 	return
-	// }
-
-	user, err := userRepo.DeleteUser(21)
+	err := userRepo.UpdateUser(&user)
 	if err != nil {
-		fmt.Println("error :", err.Error())
+		fmt.Println("errorupdate : ", err.Error())
 		return
 	}
-	fmt.Println("User Success for delete :", user)
+
+	// user, err := userRepo.DeleteUser(1)
+	// if err != nil {
+	// 	fmt.Println("error :", err.Error())
+	// 	return
+	// }
+	// fmt.Println("User Success for delete :", user)
 
 	// fmt.Println("User updated")
 
@@ -106,6 +106,6 @@ func product(db *gorm.DB) {
 		product.Print()
 		fmt.Println(strings.Repeat("=", 10))
 
-		fmt.Println("selesai")
 	}
+
 }
