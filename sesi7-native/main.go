@@ -29,8 +29,8 @@ func (e *Employee) Print() {
 const (
 	host     = "localhost"
 	port     = 5432
-	user     = "esra"
-	password = "koinworks"
+	user     = "esra12"
+	password = "koinworks12"
 	db_name  = "hacktiv_sesi7"
 )
 
@@ -41,33 +41,33 @@ func main() {
 	}
 
 	//create employee
-	// emp := Employee{
-	// 	Email:    "fadia@gmail.com",
-	// 	FullName: "Fadia",
-	// 	Age:      21,
-	// 	Division: "Accounting Manager",
-	// }
-
-	// err = createEmployee(db, &emp)
-	// if err != nil {
-	// 	fmt.Println("error :", err.Error())
-	// 	return
-	// }
-	//update employee
 	emp := Employee{
-		ID:       1,
-		FullName: "Melati Daeva",
-		Email:    "melati@gmail.com",
-		Age:      27,
-		Division: "Olahraga",
+		Email:    "kevi@gmail.com",
+		FullName: "KevinSanjaya",
+		Age:      22,
+		Division: "Accounting Manager",
 	}
-	fmt.Println("====== Update Employee by id 1 ======")
-	err = updateEmployee(db, &emp)
+
+	err = createEmployee(db, &emp)
 	if err != nil {
 		fmt.Println("error :", err.Error())
 		return
 	}
-	fmt.Println("update data success", emp)
+	//update employee
+	// emp := Employee{
+	// 	ID:       1,
+	// 	FullName: "Melati Daeva",
+	// 	Email:    "melati@gmail.com",
+	// 	Age:      27,
+	// 	Division: "Olahraga",
+	// }
+	// fmt.Println("====== Update Employee by id 1 ======")
+	// err = updateEmployee(db, &emp)
+	// if err != nil {
+	// 	fmt.Println("error :", err.Error())
+	// 	return
+	// }
+	// fmt.Println("update data success", emp)
 
 	employees, err := getAllEmployees(db)
 	if err != nil {
@@ -78,8 +78,8 @@ func main() {
 	for _, employee := range *employees {
 		employee.Print()
 	}
-	fmt.Println("====== Delete Employee by id 6 ======")
-	isSucces, err := deleteEmployee(db, 6)
+	fmt.Println("====== Delete Employee by id 5 ======")
+	isSucces, err := deleteEmployee(db, 5)
 	if err != nil {
 		fmt.Println("Error :", err.Error())
 		return
@@ -92,12 +92,6 @@ func main() {
 		fmt.Println("error :", err.Error())
 		return
 	}
-
-	// res,err := deleteEmployee(db,&res)
-	// if err != nil {
-	// 	fmt.Print("error: ", err.Error())
-	// 	return
-	// }
 
 	employee.Print()
 }
