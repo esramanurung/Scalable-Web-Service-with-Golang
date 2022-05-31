@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="15">
+  <title>Water & Wind Status</title>
+  <link rel="stylesheet" href="asset/css.css">
+
+</head>
+<style>
+  .container4 {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%) 
+  }
+</style>
+
+<body>
+  <div class="row container4">
+    <body class="background"> </body>
+    <h1 style="text-align: center; font-size: 70px;font-style: italic;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: bold;">Water & Wind Status </h1>
+      <div class=" col-sm-6 col-xl-6 mb-6">
+          <div style="background-color: lightskyblue;">
+              <div class="card-body">
+                  <div class="row d-block d-xl-flex align-items-center">
+                      <div class=" col-xl-4 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+                        <img src="asset/image/waters.png" style="width:50%;height:30%;">
+                      </div>
+                      <div class=" col-xl-7 px-xl-0">
+                          <div class="d-none d-sm-block">
+                              <h2 style="color:red; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana;size: 10px; font-weight: bold;";>Water Status</h2>
+                              <h3 class="fw-extrabold mb-2;">Status : {{.waterStatus}}</h3>
+                          </div>
+                          <div style="font-style: oblique; font-weight: bold;">
+                            Tinggi : {{.waterValue}} meter 
+                          </div> 
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class=" col-sm-6 col-xl-6 mb-6">
+          <div style="background-color: lightskyblue;">
+              <div class="card-body">
+                  <div class="row d-block d-xl-flex align-items-center">
+                      <div class=" col-xl-4 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+                          <img src="asset/image/winds.png" style="width:50%;height:30%;">
+                      </div>
+                      <div class=" col-xl-7 px-xl-0">
+                          <div class="d-none d-sm-block">
+                            <h2 style="color:red; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana;size: 10px; font-weight: bold;";>Wind Status</h2>
+                              <h3 class="fw-extrabold mb-2">Status : {{.windStatus}}</h3>
+                          </div>
+                          <div style="font-style: oblique; font-weight: bold;">
+                            Kecepatan : {{.windValue}} meter/detik
+                          </div> 
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+</html>
